@@ -1,0 +1,27 @@
+{
+  "name": "CueMeet",
+  "version": "2.3.0",
+  "manifest_version": 3,
+  "description": "Microsoft Teams transcripts",
+  "action": {},
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "matches": [
+        "https://teams.live.com/*"
+      ],
+      "exclude_matches": []
+    }
+  ],
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://teams.live.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

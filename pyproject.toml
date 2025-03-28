@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "teams-meeting-backend"
+version = "0.1.0"
+description = "Python selenium backend for teams meeting automation"
+authors = ["CueCard Dev <support@cuecard.ai>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+selenium = "^4.25.0"
+pillow = "^10.4.0"
+webdriver-manager = "^4.0.2"
+highlight-io = "^0.10.0"
+pydantic-settings = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
